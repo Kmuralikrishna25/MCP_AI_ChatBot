@@ -1,0 +1,21 @@
+[project]
+name = "mcp-ai-chatbot"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "docker>=7.2.0",
+    "fastapi>=0.143.0",
+    "httpx>=0.28.1",
+    "langchain-google-genai>=4.4.0",
+    "langchain-mcp-adapters>=0.3.2",
+    "langgraph>=1.2.9",
+    "langgraph-checkpoint-postgres>=3.1.2",
+    "mcp[cli]>=1.30.0",
+    "psycopg[binary,pool]>=3.3.5",
+    "python-dotenv>=1.2.3",
+    "streamlit>=1.64.0",
+    "tavily-python>=0.8.5",
+    "uvicorn[standard]>=0.54.0",
+]

@@ -1,0 +1,13 @@
+fastapi
+httpx
+langchain-google-genai
+langchain-mcp-adapters
+langgraph
+langgraph-checkpoint-postg
+mcp[cli]
+psycopg[binary,pool]
+python-dotenv
+streamlit
+tavily-python
+uvicorn[standard]
+docker

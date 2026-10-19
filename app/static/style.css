@@ -1,0 +1,381 @@
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+:root {
+    --background: #0b0d14;
+    --sidebar: #14151a;
+    --surface: #1b1c24;
+    --surface-hover: #252630;
+    --border: #30313b;
+    --text: #f5f5f7;
+    --muted: #9698a7;
+    --purple: #a78bfa;
+    --green: #31d5a5;
+    --blue: #55b7ff;
+}
+
+html, body, [data-testid="stApp"] {
+    font-family: "DM Sans", sans-serif;
+}
+
+[data-testid="stAppViewContainer"] {
+    background:
+        radial-gradient(ellipse at 75% 8%, rgba(77, 59, 132, 0.16), transparent 38%),
+        radial-gradient(ellipse at 15% 70%, rgba(34, 87, 105, 0.09), transparent 42%),
+        var(--background) !important;
+    color: var(--text);
+}
+
+[data-testid="stHeader"] {
+    background: transparent !important;
+}
+
+[data-testid="stSidebar"] {
+    background: var(--sidebar) !important;
+    border-right: 1px solid var(--border);
+}
+
+[data-testid="stSidebar"] > div {
+    padding-top: 1.3rem;
+}
+
+[data-testid="stMainBlockContainer"] {
+    max-width: 1100px;
+    padding-top: 1rem;
+    padding-bottom: 7rem;
+}
+
+#MainMenu, footer {
+    visibility: hidden;
+}
+
+h1, h2, h3 {
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.sidebar-brand {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 8px 0 22px;
+}
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 39px;
+    height: 39px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #8b5cf6, #2563eb);
+    color: white;
+    font-size: 24px;
+}
+
+.brand-title {
+    color: #ffffff;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.brand-subtitle {
+    color: var(--muted);
+    font-size: 11px;
+    margin-top: 2px;
+}
+
+.sidebar-section {
+    color: #797c8d;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    margin: 20px 0 10px;
+}
+
+.sidebar-footer {
+    border-top: 1px solid var(--border);
+    padding-top: 16px;
+    margin-top: 22px;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 2;
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 5px 20px;
+    border-bottom: 1px solid var(--border);
+}
+
+.topbar-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.topbar-logo {
+    width: 37px;
+    height: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #7148dc, #2a7fd4);
+    color: white;
+    font-size: 22px;
+}
+
+.topbar-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: white;
+}
+
+.topbar-subtitle {
+    color: var(--muted);
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+.welcome {
+    text-align: center;
+    padding: 72px 10px 25px;
+}
+
+.welcome-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 66px;
+    height: 66px;
+    margin: 0 auto 28px;
+    border-radius: 50%;
+    background:
+        linear-gradient(#181922, #181922) padding-box,
+        linear-gradient(135deg, #8b5cf6, #2fd6aa, #4a8eff) border-box;
+    border: 2px solid transparent;
+    color: white;
+    font-size: 33px;
+    box-shadow: 0 0 35px rgba(139, 92, 246, 0.12);
+}
+
+.welcome-heading {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(25px, 3.5vw, 37px);
+    font-weight: 700;
+    color: white;
+    letter-spacing: -1.2px;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #2ed6a7, #55b7ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.welcome-description {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+    margin-top: 10px;
+}
+
+.suggestions-label {
+    text-align: center;
+    color: #8b8d9c;
+    font-size: 11px;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    margin: 12px 0;
+}
+
+[data-testid="stChatMessage"] {
+    background: linear-gradient(135deg, #222b3a, #1d2430) !important;
+    border: 1px solid #4a566d !important;
+    border-left: 4px solid #55b7ff !important;
+    border-radius: 18px;
+    padding: 15px 18px;
+    margin-bottom: 13px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
+}
+
+[data-testid="stChatMessage"]:has(
+    [data-testid="stChatMessageAvatarUser"]
+) {
+    background: linear-gradient(135deg, #35294d, #292338) !important;
+    border-color: #655080 !important;
+    border-left-color: #b69aff !important;
+}
+
+[data-testid="stChatMessage"] [data-testid="stMarkdownContainer"] {
+    color: #f5f5f7;
+}
+
+[data-testid="stChatMessageAvatarAssistant"] {
+    background: linear-gradient(135deg, #8b5cf6, #2563eb);
+}
+
+[data-testid="stChatMessageAvatarUser"] {
+    background: #343642;
+}
+
+[data-testid="stChatInput"] {
+    background: #191a24 !important;
+    border: 1px solid #414254 !important;
+    border-radius: 20px !important;
+    box-shadow: 0 8px 34px rgba(0, 0, 0, 0.3);
+}
+
+[data-testid="stChatInput"]:focus-within {
+    border-color: #a78bfa !important;
+    box-shadow: 0 0 0 1px rgba(167, 139, 250, 0.28), 0 8px 34px rgba(0, 0, 0, 0.3);
+}
+
+[data-testid="stChatInput"] textarea {
+    background-color: #191a24 !important;
+    color: #f5f5f7 !important;
+    -webkit-text-fill-color: #f5f5f7 !important;
+    caret-color: #a78bfa;
+}
+
+[data-testid="stChatInput"] textarea::placeholder {
+    color: #9698a7 !important;
+    -webkit-text-fill-color: #9698a7 !important;
+    opacity: 1;
+}
+
+[data-testid="stChatInput"] button {
+    border-radius: 50%;
+}
+
+.stButton > button {
+    background: #1d1e27;
+    color: #f5f5f7;
+    border: 1px solid #353643;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 500;
+    min-height: 42px;
+    transition: all 0.2s ease;
+}
+
+.stButton > button:hover {
+    background: #282936;
+    color: white;
+    border-color: #8b5cf6;
+    transform: translateY(-1px);
+}
+
+.stButton > button[kind="primary"] {
+    background: linear-gradient(110deg, #8b5cf6, #5968e8);
+    color: #ffffff;
+    border: none;
+    font-weight: 700;
+}
+
+.stButton > button[kind="primary"]:hover {
+    background: linear-gradient(110deg, #9c75fa, #6f7cf4);
+    color: #ffffff;
+}
+
+[data-testid="stExpander"] {
+    background: #181922;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+}
+
+.tool-group-title {
+    color: #b9a7ff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 14px 0 8px;
+    text-transform: uppercase;
+}
+
+.tool-card {
+    background: linear-gradient(135deg, #20212c, #1a1b24);
+    border: 1px solid #30313e;
+    border-radius: 10px;
+    margin: 7px 0 4px;
+    padding: 10px 11px;
+}
+
+.tool-name {
+    color: #f2efff;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.tool-description {
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.5;
+    margin-top: 4px;
+}
+
+[data-testid="stSidebar"] .stButton > button {
+    text-align: left;
+    justify-content: flex-start;
+    border-radius: 11px;
+}
+
+[data-testid="stSidebar"] .stButton > button[kind="primary"] {
+    justify-content: center;
+}
+
+.backend-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #173128;
+    color: #70e5b2;
+    border: 1px solid #2a5744;
+    border-radius: 30px;
+    padding: 7px 12px;
+    font-size: 12px;
+}
+
+.backend-status.offline {
+    background: #351d25;
+    color: #ff9aa9;
+    border-color: #64313f;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: currentColor;
+}
+
+.thread-info {
+    color: #777a8a;
+    font-size: 11px;
+    overflow-wrap: anywhere;
+    margin-top: 14px;
+}
+
+@media (max-width: 768px) {
+    [data-testid="stMainBlockContainer"] {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .welcome {
+        padding-top: 35px;
+    }
+
+    .welcome-heading {
+        font-size: 26px;
+    }
+
+    .topbar-subtitle {
+        font-size: 10px;
+    }
+}
